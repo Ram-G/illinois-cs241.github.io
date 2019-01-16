@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- If for some reason you are using IE, use edge -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- So bootstrap isn't horrible, set the width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/images/favicons/manifest.json">
+  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <title>Deadlocked Diners</title>
+
+  <!-- Reference a CDN so this is properly cached in the browser forever. Unless they clean out the
+       Cache this will incur no load time. Ideally we should put a security checksum but that breaks
+       Firefox development sometimes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+
+  <!-- Asynchronously load the code style sheet because we want everything loaded as fast as possible
+       Also tag with ?v=time to bust the cache of any browser so updates appear -->
+  <link async rel="stylesheet" href="/css/code-style.css?v='2019-01-16 13:38:19 -0600'">
+
+  <!-- Don't load async because this will make the page render faster, plus the file is small.
+       Also do the same cache busting magic here -->
+  <link rel="stylesheet" href="/css/main.css?v='2019-01-16 13:38:19 -0600'">
+
+</head>
+
+<body>
+<!-- Always shows a header, even in smaller screens. -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+
+            <!-- Navigation button as html so we don't have to resize images -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+
+
+            <!-- Inline tux for speed -->
+            <a id="tuxlink"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAJCAMAAAA4jZ0cAAAAM1BMVEX///8CAgQMDAwsLCw0NDSjbQCkbQC+vbzOkwDU1NTlrADqvADxtgD0vQD12wD+/vz+//yBSdYEAAAAAXRSTlMAQObYZgAAADFJREFUCB0FwQkCQDAQBLCsq6g1/v9aCVQBthUwX8BIgStZCpUvKXSSLs6eyd0Pdg5+JwkBVyC74QYAAAAASUVORK5CYII=" title="Tux" alt="Tux" style="margin-left: 1em; width: 24px; filter: drop-shadow(1px 1px 0 white) drop-shadow(1px -1px 0 white) drop-shadow(-1px 1px 0 white) drop-shadow(-1px -1px 0 white); margin-top: 1em;"/></a>
+
+            <a class="navbar-brand navbar-link normal" href="/">CS 241: System Programming</a>
+            <a class="navbar-brand navbar-link small" href="/">CS 241</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+            <li>
+                <a class="navbar-link" href="/assignments.html">Assignments</a>
+            </li>
+            
+            <li>
+                <a class="navbar-link" href="/quiz_topics.html">Quizzes</a>
+            </li>
+            
+            <li>
+                <a class="navbar-link" href="/help.html">Help!</a>
+            </li>
+            
+            <li>
+                <a class="navbar-link" href="/schedule.html">Schedule</a>
+            </li>
+            
+            <li>
+                <a class="navbar-link" href="/honors.html">Honors</a>
+            </li>
+            
+            <li>
+                <a class="navbar-link" href="/staff.html">The Crew</a>
+            </li>
+            
+            <li>
+                <a class="navbar-link" href="/search.html">Search</a>
+            </li>
+            
+            <li>
+                <a class="navbar-link" href="/coursebook/index.html">Coursebook</a>
+            </li>
+            
+          </ul>
+        </div>
+        </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 col-sm-1 col-xs-0"></div>
+    <div class="col-md-8 col-sm-10 col-xs-12">
+      <div class="wrapper">
+        <div class="pad"><div class="card">
+          <div class="title">
+            <div class="speaker-wrapper">
+              <button onclick="speak()" class="speaker" alt="Read Page"></button>
+            </div>
+            
+            
+            
+            <h1>
+              Deadlocked Diners
+
+              
+                <a class="github-link hidden-xs" href="https://github.com/illinois-cs241/assignment-docs/blob/master//deadlocked_diners.md">Edit on Github</a>
+              
+            </h1>
+          </div>
+          <div class="container-fluid"><div class="row"><div class="content col-sm-11 .col-sm-offset-1">
+            
+              <div class="submission-wrapper">
+                
+                  <b>Entire Assignment</b> due <b>2019-03-06 23:59</b><br/>
+                  
+                    <b>Graded files:</b>
+                    <ul>
+                      
+                        <li>good_company.c</li>
+                      
+                    </ul>
+                  
+                
+              </div>
+            
+            
+              <div class="schedule-wrapper">
+                
+                  <b>AG Schedule</b>
+                  <br/>
+                  <b>Pre-deadline Runs</b>
+                    <ul>
+                      
+                        <li>2019-03-01 20:00</li>
+                      
+                        <li>2019-03-04 20:00</li>
+                      
+                    </ul>
+                
+              </div>
+            
+          </div></div></div>
+        </div></div>
+      </div>
+      
+      <div class="toc-wrapper">
+<h4>Content</h4>
+<ul class="toc">
+<li><a id="toc_backstory" href="#backstory" class="fancy-link">Backstory</a></li>
+<li><a id="toc_your-job" href="#your-job" class="fancy-link">Your Job</a></li>
+<li><a id="toc_testing" href="#testing" class="fancy-link">Testing</a></li>
+<li><a id="toc_grading" href="#grading" class="fancy-link">Grading</a></li>
+</ul>
+</div>
+      
+      <div id="content">
+          <div class="wrapper">
+  <div class="pad"><div class="card">
+<div class="title"><h2 id="learning-objectives" class="title-text">Learning Objectives<a class="anchor title-text" href="#learning-objectives">#</a>
+</h2></div>
+  
+  
+
+
+
+<div class="container-fluid"><div class="row"><div class="content col-sm-11 .col-sm-offset-1">
+<p>
+    The learning objectives for Deadlocked Diners are: <br>
+    </p>
+<ul class="mdl-list">
+      
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">Synchronization</span>
+        </li>
+      
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">Deadlock / Livelock / Starvation</span>
+        </li>
+      
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">Coffman Conditions</span>
+        </li>
+      
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">Dining Philosophers</span>
+        </li>
+      
+        <li class="mdl-list__item">
+          <span class="mdl-list__item-primary-content">Messing with Interns</span>
+        </li>
+      
+    </ul>
+</div></div></div>
+</div></div>
+</div>
+          <div class="wrapper">
+<div class="pad"><div class="card">
+<div class="title"><h2 id="backstory" class="title-text">Backstory<a class="anchor title-text" href="#backstory">#</a>
+</h2></div>
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid"><div class="row"><div class="content col-sm-11 .col-sm-offset-1">
+<p>You are creating a start up that allows companies to rent <s>code monkeys</s> interns for a project.
+They are billed by the number of days it takes to complete the project.
+The reason why companies want to rent interns is because they realized they do not need dedicated interns,
+since they do not always have projects at hand (sometimes they are contemplating about life).
+Basically a company in 1 of 3 states: “trying to rent interns”, “working with interns” or “having a board meeting”.
+They came to the conclusion that a possible way of handling this dilemma is to simply overwork the interns by having them work for 2 companies,
+just not at the same time.</p>
+<p>This is where you come along….</p>
+<p>The scenario is as follows.
+Each of the companies practices pair programming,
+so you will need to find a way to schedule the interns so that we can continue to bill each company as often as possible.
+This means that work on a project can only be completed when the company has <strong>TWO</strong> interns assigned to it.
+There are <code class="highlighter-rouge">n</code> companies and <code class="highlighter-rouge">k</code> interns in this scenario.
+For some odd reason the <code class="highlighter-rouge"><a href="https://linux.die.net/man/3/i" class="fancy-link">i</a></code>th company likes to work with intern <code class="highlighter-rouge">i%k</code> and <code class="highlighter-rouge">(i+1)%k</code>…
+A company might decide to give the interns a break from the project,
+in which case they are free to be assigned to another company that wants them and won’t be reassigned until said company gives them a break.</p>
+<p>Your mentor has written a simulation of this scenario with a synchronization strategy, but it does not work.
+The mentor left a note that reads:</p>
+<blockquote>
+
+  <p>Dear intern, I have written a simulation of the ‘intern for rent’ program,
+but sometimes a company grabs one intern,
+then waits for the second intern,
+which wont be released until the first intern is given a break…</p>
+</blockquote>
+</div></div></div>
+</div></div>
+<div class="pad"><div class="card">
+<div class="title"><h2 id="your-job" class="title-text">Your Job<a class="anchor title-text" href="#your-job">#</a>
+</h2></div>
+
+
+
+<div class="container-fluid"><div class="row"><div class="content col-sm-11 .col-sm-offset-1"><ul>
+  <li>Read <a href="https://github.com/angrave/SystemProgramming/wiki/Deadlock%2C-Part-1%3A-Resource-Allocation-Graph" class="fancy-link wiki-link">Resource Allocation Graphs</a> and <a href="https://github.com/angrave/SystemProgramming/wiki/Deadlock%2C-Part-2%3A-Deadlock-Conditions" class="fancy-link wiki-link">Deadlock Conditions</a> to have all the knowledge you will need for this assignment.</li>
+  <li>Read <code class="highlighter-rouge">simulator.c</code>, <code class="highlighter-rouge">bad_company.c</code>, and <code class="highlighter-rouge">company.h</code> until you have a good sense of what the code is doing (nothing will make sense until you do).</li>
+  <li>Overwrite <code class="highlighter-rouge">good_company.c</code> with your correct solution (hint: look in <code class="highlighter-rouge">company.h</code> for useful functions).</li>
+</ul></div></div></div>
+</div></div>
+<div class="pad"><div class="card">
+<div class="title"><h2 id="testing" class="title-text">Testing<a class="anchor title-text" href="#testing">#</a>
+</h2></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid"><div class="row"><div class="content col-sm-11 .col-sm-offset-1">
+<p>We provided you with a Makefile.</p>
+<p>Typing</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
+</code></pre></div></div>
+<p>will create the <code class="highlighter-rouge">good_company</code> and <code class="highlighter-rouge">bad_company</code> executable.
+For both the <code class="highlighter-rouge">good_company</code> and <code class="highlighter-rouge">bad_company</code> executable you can execute them with 2 required arguments and 3<sup>rd</sup> optional argument as follows:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./bad_company 5 6 100000
+</code></pre></div></div>
+<p>will run the bad solution with 5 companies and 6 interns and with a delta of 100000.
+Delta is approximately how long an operation takes in microseconds (read the source code for more details).</p>
+<p>If you see something like this:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Company 0 used our services for 2083 billable days.
+Company 1 used our services for 2164 billable days.
+Company 2 used our services for 2456 billable days.
+Company 3 used our services for 2826 billable days.
+Company 4 used our services for 3733 billable days.
+
+Total Billable days : 13262
+</code></pre></div></div>
+<p>then the simulation terminated successfully.
+This does not mean your solution is correct.
+There may still be race conditions, so it it up to you to test your code thoroughly with all sorts of parameters.
+If the simulator stops without billing the companies just hit <code class="highlighter-rouge">CTRL+Z</code>.</p>
+</div></div></div>
+</div></div>
+<div class="pad"><div class="card">
+<div class="title"><h2 id="grading" class="title-text">Grading<a class="anchor title-text" href="#grading">#</a>
+</h2></div>
+
+
+
+
+
+<div class="container-fluid"><div class="row"><div class="content col-sm-11 .col-sm-offset-1">
+<p>Your grade depends on having a good working solution.</p>
+<p>A good solution must have the following:</p>
+<ul>
+  <li>No Deadlock</li>
+  <li>No Livelock</li>
+  <li>Performant
+    <ul>
+      <li>Performance will be judged against the reference solution (<code class="highlighter-rouge">good_company_reference</code>) and measured by total billable days.</li>
+      <li>You must be within <strong>90%</strong> of the reference solution to receive full points.</li>
+    </ul>
+  </li>
+  <li>Fair (all companies should get a roughly equal number of billable days)
+    <ul>
+      <li>You must be within <strong>90%</strong> of than the reference solution to receive full points.</li>
+      <li>Fairness is determined by <code class="highlighter-rouge">min_billable_days/max_billable_days</code> where higher is better.</li>
+    </ul>
+  </li>
+  <li>Must adhere to the rules of the scenario</li>
+  <li>Run with a single intern should not cause deadlock AND not burn cpu cycles</li>
+  <li>A valid solution should not know about the number of interns or or number of companies</li>
+</ul>
+</div></div></div>
+</div></div>
+</div>
+          
+          <div class="wrapper">
+</div>
+      </div>
+      <div class="col-md-2 col-sm-1 col-xs-0"></div>
+    </div>
+  </div>
+  <script>
+    var github_repo = "illinois-cs241/illinois-cs241.github.io";
+    var github_path = "_docs/deadlocked_diners.md";
+  </script>
+  <!-- Mathjax takes a while to load so do a lazy load to so we can get accessibility -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" crossorigin="anonymous"></script>
+
+<!-- Bring in JQuery and Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+<!-- Again bust cache on the main.js file -->
+<script src="/js/main.js?v='2019-01-16 13:38:19 -0600'"></script>
+
+<footer class="">
+
+<div class="container-fluid">
+<div class="shadow"></div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
